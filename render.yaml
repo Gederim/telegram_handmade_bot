@@ -3,6 +3,6 @@ services:
     name: telegram-handmade-bot
     env: python
     plan: free
-    pythonVersion: 3.11
+    pythonVersion: 3.13.4
     buildCommand: pip install -r requirements.txt
     startCommand: python telegram_handmade_bot.py
