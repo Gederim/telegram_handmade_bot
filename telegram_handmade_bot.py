@@ -175,4 +175,10 @@ def main():
     app.add_handler(CommandHandler('start', start))
     app.add_handler(conv)
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, text_message_handler))
-    app.add_handler(MessageHandler(filters.VIDEO | filt_
+    app.add_handler(MessageHandler(filters.VIDEO | filters.PHOTO, auto_file_id))
+
+    print("Bot started on Render...")
+    app.run_polling()
+
+if __name__ == "__main__":
+    main()
